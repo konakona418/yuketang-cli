@@ -1,0 +1,33 @@
+[project]
+name = "yuketang-cli"
+version = "0.1.0"
+description = "雨课堂 CLI：面向 coding agent 的课程/视频/作业/讨论接口"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "fontTools",
+    "beautifulsoup4",
+    "websocket-client",
+    "qrcode",
+    "Pillow",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+yt = "yuketang_cli.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["yuketang_cli*"]
+
+[tool.setuptools.package-data]
+yuketang_cli = ["mapping_file.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

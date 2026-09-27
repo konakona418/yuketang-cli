@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 环境
+.venv/
+venv/
+.env
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 本地配置 / 凭据（运行时写在 ~/.config/yuketang/，这里再兜一层）
+config.json
+cookies*.json
+qrcode.png
